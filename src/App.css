@@ -204,9 +204,6 @@ section#skills div.myskills div.skill {
   cursor: default;
   padding: 3px 8px;
   transition: transform 0.2s ease, scale 0.2s ease;
-}
-
-section#skills div.myskills div.skill {
   animation: colorPulse 1s infinite;
 }
 
@@ -218,26 +215,6 @@ section#skills div.myskills div.skill {
   50% {
     background-color: #000;
     transform: matrix(1, 0.03, 0, 1, 0, 1);
-  }
-
-  100% {
-    background-color: #343a40;
-  }
-}
-
-section#skills div.myskills .div.special-skill {
-  animation: special-skill 2s infinite;
-  cursor: pointer;
-}
-
-@keyframes special-skill {
-  0% {
-    background-color: #17a2b8;
-  }
-
-  50% {
-    background-color: #373e01;
-    transform: matrix(1, -0.06, 0, 1, 0, 1);
   }
 
   100% {
@@ -258,6 +235,26 @@ section#skills div.myskills div.skill span {
   color: #9dcbe1;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+section#skills div.myskills div.special-skill {
+  animation: special-skill 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes special-skill {
+  0% {
+    background-color: #17a2b8;
+  }
+
+  50% {
+    background-color: #373e01;
+    transform: matrix(1, -0.06, 0, 1, 0, 1);
+  }
+
+  100% {
+    background-color: #343a40;
+  }
 }
 
 .hidesection {
