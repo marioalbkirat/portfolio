@@ -9,7 +9,7 @@ function App() {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path='/' exact element={<Home />} />
+                <Route path='/portfolio' exact element={<Home />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>
