@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import React, { useEffect, useState, useRef } from "react";
 import Line from '../../components/Line/Line'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaUniversity, FaLaravel, FaGithub, FaReact, FaBootstrap, FaCss3, FaHtml5, FaJava, FaDatabase, FaPhone, FaLinkedin } from "react-icons/fa";
 import { SiHtmlacademy, SiThymeleaf, SiUdemy, SiDrupal, SiJquery, SiAxios, SiApachemaven, SiSwagger, SiJsonwebtokens, SiHibernate } from "react-icons/si";
 import { MdWork, MdOutlineSecurity, MdEmail } from "react-icons/md";
@@ -220,7 +219,7 @@ const Home = () => {
         }
     };
     useEffect(() => {
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 1000 , disable: 'mobile'});
     }, []);
     useEffect(() => {
         if (hoverTime >= 10000) setShowHideElement(true);

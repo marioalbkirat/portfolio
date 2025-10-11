@@ -16,6 +16,37 @@ a {
   text-decoration: none !important;
 }
 
+header div.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgb(4, 4, 51);
+  width: 0;
+  z-index: 100;
+  transition: width 0.1s ease-out;
+}
+
+header button.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #343a40;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+  z-index: 100;
+}
+
+header button.scroll-top:hover {
+  opacity: 1;
+}
+
 section {
   padding: 3rem 0;
 }

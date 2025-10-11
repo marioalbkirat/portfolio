@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from "react";
-import "./Navbar.css"
 const Navber = () => {
     const [scrollProgress, setScrollProgress] = useState(0);
     const [showButton, setShowButton] = useState(false);
@@ -19,25 +17,9 @@ const Navber = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     return (
-        <header className="main-hearder bg-dark">
+        <header>
             <div className="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
-            {/* <div className="container">
-                <div className="row m-0 text-center">
-                    <div className="col-12">
-                        <ul className="d-flex p-0 m-0 list-unstyled">
-                            <li className='col py-4'><Link className='text-white p-0 m-0 text-decoration-none text-capitalize' to="/">home</Link></li>
-                            <li className='col py-4'><Link className='text-white p-0 m-0 text-decoration-none text-capitalize' to="/experience">experience</Link></li>
-                            <li className='col py-4'><Link className='text-white p-0 m-0 text-decoration-none text-capitalize' to="/projects">projects</Link></li>
-                            <li className='col py-4'><Link className='text-white p-0 m-0 text-decoration-none text-capitalize' to="/contact">contact</Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </div> */}
-            {showButton && (
-                <button className="scroll-top" onClick={scrollToTop}>
-                    ↑ Top
-                </button>
-            )}
+            {showButton && (<button className="scroll-top" onClick={scrollToTop}>↑ Top</button>)}
         </header>
     )
 }
