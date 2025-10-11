@@ -192,6 +192,12 @@ const languages = [
     { name: "Arabic", level: "Native" },
     { name: "English", level: "Conversational" },
 ];
+const contact = [
+    { href: "mailto:mario.albkirat@gmail.com", icon: <MdEmail />, title: "mario.albkirat@gmail.com" },
+    { href: "tel:+962795030624", icon: <FaPhone />, title: "+962795030624" },
+    { href: "https://www.linkedin.com/in/marwan-albkirat-085844382/", icon: <FaLinkedin />, title: "Marwan Albkirat" },
+    { href: "https://wa.me/962795030624", icon: <IoLogoWhatsapp />, title: "Chat on WhatsApp" },
+];
 const Home = () => {
     const [hoverTime, setHoverTime] = useState(0);
     const [showHideElement, setShowHideElement] = useState(false);
@@ -221,8 +227,8 @@ const Home = () => {
     }, [hoverTime]);
     return (
         <main>
-            <section className='py-5 mb-1' aos="zoom-in-up" id='profile'>
-                <h2 className=' text-center py-5'>Professional Summary</h2>
+            <section aos="zoom-in-up" id='profile'>
+                <h2>professional summary</h2>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-12">
@@ -234,106 +240,93 @@ const Home = () => {
                                 height="100%"
                             />
                         </div>
-                        <div className="col-md-6 col-12 d-flex justify-content-around flex-column">
-                            <h4 className='text-capitalize'>marwan albkirat - full-stack java developer</h4>
-                            <p className='text-capitalize'>Full-Stack Java Developer with over two years of experience in designing and developing dynamic web applications. Highly proficient in front-end development, backend integration, and performance optimization. Having worked across three different organizations, I have developed strong adaptability to diverse technologies, programming languages, and collaborative environments. I am seeking to contribute my expertise in Java and Spring Boot within a forward-thinking software development team.</p>
+                        <div className="col-md-6 col-12">
+                            <div className="details">
+                                <h4>marwan albkirat - full-stack java developer</h4>
+                                <p>Full-Stack Java Developer with over two years of experience in designing and developing dynamic web applications. Highly proficient in front-end development, backend integration, and performance optimization. Having worked across three different organizations, I have developed strong adaptability to diverse technologies, programming languages, and collaborative environments. I am seeking to contribute my expertise in Java and Spring Boot within a forward-thinking software development team.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <Line />
-            <section className='py-5' aos="fade-down" id="education">
-                <h2 className='text-uppercase mb-5 text-center'>education & achievements</h2>
+            <section aos="fade-down" id="education">
+                <h2>education & achievements</h2>
                 <div className="container">
                     {educationData.map((edu, index) => (
-                        <div key={index} className="education-card position-relative p-4 mb-4">
+                        <div key={index} className="education-card">
                             <h4>{edu.school}{edu.icon}</h4>
-                            <h6 className='text-muted mb-3'>{edu.degree}</h6>
-                            <p className='text-primary'>{edu.year}</p>
+                            <p className='degree'>{edu.degree}</p>
+                            <p className='year'>{edu.year}</p>
                             <p>{edu.details}</p>
-                            <span className='loc education-location position-absolute text-center text-light'>{edu.location}</span>
-                            <span className='loc education-address position-absolute text-center text-light'>{edu.address}</span>
-                            {edu.otherLinks && (
-                                <ul className='otherlinks d-flex'>
-                                    <h6 className='text-capitalize'>for more information, please visit these links: </h6>
-                                    {edu.otherLinks.map((lk, index) => (
-                                        <li className='mx-2' key={index}>
-                                            <a
-                                                href={lk.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                style={{ color: "inherit" }}
-                                                className="text-decoration-none"
-                                            >
-                                                <span>{lk.title}</span>
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-
+                            <ul className='links'>
+                                <h6>for more information, please visit these links: </h6>
+                                {edu.otherLinks.map((lk, index) => (
+                                    <li key={index}>
+                                        <a
+                                            href={lk.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span>{lk.title}</span>
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
+                            <div className="location">
+                                <span>{edu.address}</span>
+                                <span>{edu.location}</span>
+                            </div>
                         </div>
                     ))}
                 </div>
             </section>
             <Line />
-            <section aos="fade-down" id='experience' className='py-5'>
-                <h2 className='text-uppercase text-center mb-4'>experience</h2>
-                <div className="timeline">
-                    {experienceData.map((exp, index) => (
-                        <div key={index} className="timeline-item">
-                            <div className="timeline-icon">
-                                <FontAwesomeIcon icon={exp.icon} />
-                            </div>
-                            <div className="timeline-content px-1 py-3">
-                                <div className=" d-flex align-items-center">
-                                    <h4 className='mr-1'>{exp.role}</h4>
-                                    <span className='ml-1 mb-1'>{exp.icon}</span>
-
-                                </div>
-                                <h6 className="text-muted">  {exp.company}</h6>
-                                <p className="text-primary">{exp.year}</p>
-                                <p>{exp.details}</p>
-                            </div>
-                            {exp.otherLinks && (
-                                <ul className='otherlinks d-flex'>
-                                    <h6 className='text-capitalize'>for more information, please visit this link: </h6>
-                                    {exp.otherLinks.map((lk, index) => (
-                                        <li className='mx-2' key={index}>
-                                            <a
-                                                href={lk.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                style={{ color: "inherit" }}
-                                                className="text-decoration-none"
-                                            >
-                                                <span>{lk.title}</span>
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            )}
-                            <span className='position-absolute loc education-location'>{exp.location}</span>
-                            <span className='loc education-address position-absolute text-center text-light'>{exp.address}</span>
-                            <span className='position-absolute exp-img'>{exp.img}</span>
-                        </div>
-                    ))}
-                </div>
-            </section>
-            <Line />
-            <section
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                id='skills' className='py-5'>
-                <h2 className='text-uppercase text-center mb-4'>skills</h2>
+            <section aos="fade-down" id='experience'>
+                <h2>experience</h2>
                 <div className="container">
-                    <div className="myskills py-5">
+                    <div className="timeline">
+                        {experienceData.map((exp, index) => (
+                            <div key={index} className="experience-card">
+                                <h4>{exp.role}{exp.icon}</h4>
+                                <p className="degree">{exp.company}</p>
+                                <p className="year">{exp.year}</p>
+                                <p>{exp.details}</p>
+                                <ul className='links'>
+                                    <h6>for more information, please visit this link: </h6>
+                                    {exp.otherLinks.map((lk, index) => (
+                                        <li key={index}>
+                                            <a
+                                                href={lk.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <span>{lk.title}</span>
+                                            </a>
+                                        </li>
+                                    ))}
+                                </ul>
+                                <div className="location">
+                                    <span>{exp.address}</span>
+                                    <span>{exp.location}</span>
+                                </div>
+                                <span>{exp.img}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+            <Line />
+            <section onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id='skills'>
+                <h2>skills</h2>
+                <div className="container">
+                    <div className="myskills">
                         {skills.map((lang, index) => (
                             <div
                                 aos={`${showHideElement && index === skills.length - 1 ? "" : "flip-up"}`}
                                 aos-duration="400"
                                 key={index}
-                                className={`lang ${showHideElement && index === skills.length - 1 ? "test" : ""}`}
+                                className={`skill ${showHideElement && index === skills.length - 1 ? "special-skill" : ""}`}
                             >
                                 {showHideElement && index === skills.length - 1 ? (
                                     <a href="https://leetcode.com/u/oMZuAnuJiy/" target="_blank"
@@ -351,28 +344,28 @@ const Home = () => {
                         ))}
                     </div>
                     {showHideElement &&
-                        <div className="ss">
-                            <span className="hidesection bg-info text-capitalize">It seems that you are interested in this section, click on the different skill</span>
+                        <div className="hidesection">
+                            <span>It seems that you are interested in this section, click on the different skill</span>
                         </div>
                     }
                 </div>
             </section>
             <Line />
-            <section id='projects' className='py-5'>
-                <h2 className='text-uppercase text-center mb-4'>projects</h2>
+            <section id='projects'>
+                <h2>projects</h2>
                 <div className="container">
                     <div className="row">
-                        <div aos="flip-left" className="col-4"><Card img="https://www.fhr.fraunhofer.de/en/sections/Projekt-Management-Office-PMO/jcr:content/contentPar/sectioncomponent/sectionParsys/textwithasset_copy/imageComponent/image.img.jpg/1683010768482/Fraunhofer-FHR-Bereich-PMO-2000px.jpg" /></div>
-                        <div aos="flip-left" className="col-4"><Card img="https://c8.alamy.com/comp/H5E37C/consultant-presentation-about-project-management-planning-time-scope-H5E37C.jpg" /></div>
-                        <div aos="flip-left" className="col-4"><Card img="https://www.simplilearn.com/ice9/free_resources_article_thumb/project_management_coursefees.jpg" /></div>
+                        <div aos="flip-left" className="col-lg-4 col-12"><Card img="https://www.fhr.fraunhofer.de/en/sections/Projekt-Management-Office-PMO/jcr:content/contentPar/sectioncomponent/sectionParsys/textwithasset_copy/imageComponent/image.img.jpg/1683010768482/Fraunhofer-FHR-Bereich-PMO-2000px.jpg" /></div>
+                        <div aos="flip-left" className="col-lg-4 col-12"><Card img="https://c8.alamy.com/comp/H5E37C/consultant-presentation-about-project-management-planning-time-scope-H5E37C.jpg" /></div>
+                        <div aos="flip-left" className="col-lg-4 col-12"><Card img="https://www.simplilearn.com/ice9/free_resources_article_thumb/project_management_coursefees.jpg" /></div>
                     </div>
                 </div>
             </section>
             <Line />
-            <section id='languages' className='py-5'>
-                <h2 className='text-uppercase text-center mb-4'>languages</h2>
+            <section id='languages'>
+                <h2>languages</h2>
                 <div className=" container">
-                    <div className="row  text-center">
+                    <div className="row">
                         {languages.map((lang, idx) => (
                             <div aos="slide-left" key={idx} className="col">
                                 <h4>{lang.name}</h4>
@@ -383,34 +376,16 @@ const Home = () => {
                 </div>
             </section>
             <Line />
-            <section id='contact' className='py-5'>
-                <h2 className='text-uppercase text-center mb-5'>contact</h2>
+            <section id='contact'>
+                <h2>contact</h2>
                 <div className="container">
-                    <div className="row text-center">
-                        <div aos="zoom-out-up" className="col-3 contact-ref">
-                            <a href="mailto:mario.albkirat@gmail.com">
-                                <MdEmail /> mario.albkirat@gmail.com
-                            </a>
-                        </div>
-                        <div aos="zoom-out-up" className="col-3 contact-ref">
-                            <a href="tel:+962795030624">
-                                <FaPhone /> +962795030624
-                            </a>
-                        </div>
-                        <div aos="zoom-out-up" className="col-3 contact-ref">
-                            <a href="https://www.linkedin.com/in/marwan-albkirat-085844382/">
-                                <FaLinkedin /> Marwan Albkirat
-                            </a>
-                        </div>
-                        <div aos="zoom-out-up" className="col-3 contact-ref">
-                            <a
-                                href="https://wa.me/962795030624"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <IoLogoWhatsapp /> Chat on WhatsApp
-                            </a>
-                        </div>
+                    <div className="row">
+                        {contact.map((ele, index) => (
+                            <div key={index} aos="zoom-up" className="col-md-3 col-sm-6 sol-12 contact-ref">
+                                <a href={ele.href}>{ele.icon} {ele.title}
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

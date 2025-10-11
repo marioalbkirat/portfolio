@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  text-transform: capitalize;
 }
 
 ul {
@@ -11,9 +12,25 @@ ul {
   padding: 0;
 }
 
-section#profile h3,
-p {
-  color: "#343a40";
+a {
+  text-decoration: none !important;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section>h2 {
+  text-align: center;
+  padding: 3rem 0;
+  text-transform: uppercase;
+}
+
+section#profile .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
 
 section#profile img {
@@ -26,59 +43,78 @@ section#profile p {
 
 section#education div.education-card {
   box-shadow: 0px 0px 15px -8px rgba(0, 0, 0, 1);
-  border-radius: 20px !important;
+  border-radius: 20px;
+  position: relative;
+  padding: 2rem;
+  margin-bottom: 1rem;
 }
 
-section#education div.education-card>h4 svg {
-  margin: 0 0 7px 6px;
+section#education div.education-card>h4 svg,
+section#experience div.experience-card>h4 svg {
+  margin: 0 0 2px 6px;
 }
 
-.loc {
-  top: 19px;
-  border-radius: 10px;
+section#education div.education-card p.degree,
+section#experience div.experience-card p.degree {
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+section#education div.education-card p.year,
+section#experience div.experience-card p.year {
+  color: #007bff;
+}
+
+section#education div.education-card ul.links,
+section#experience div.experience-card ul.links {
+  display: flex;
+}
+
+section#education div.education-card ul.links li,
+section#experience div.experience-card ul.links li {
+  margin: 0 1rem;
+}
+
+section#education div.education-card ul.links li a,
+section#experience div.experience-card ul.links li a {
+  color: #007bff;
+}
+
+section#education div.education-card div.location,
+section#experience div.experience-card div.location {
+  top: 2rem;
+  right: 1.8rem;
   max-width: 100%;
-  padding: 0.25rem 0.7rem;
+  position: absolute;
+  color: #fff;
 }
 
-.education-location {
-  right: 20px;
+section#education div.education-card .location span,
+section#experience div.experience-card div.location span {
+  padding: 0.25rem 0.7rem;
+  border-radius: 10px;
+}
+
+section#education div.education-card .location span:first-child,
+section#experience div.experience-card div.location span:first-child {
   background-color: #28a745;
+  margin: 0 1rem;
 }
 
-span.position-absolute.exp-img {
-  top: 60px;
-  right: 20px;
-  padding: 0.25rem 0.7rem;
-  border-radius: 10px;
-  max-width: 100%;
-}
-
-span.position-absolute.exp-img img {
-  width: 50px;
-  height: 32px;
-}
-
-.education-address {
-  right: 95px;
+section#education div.education-card .location span:last-child,
+section#experience div.experience-card div.location span:last-child {
   background-color: rgb(4, 4, 51);
 }
 
-.timeline-content p {
-  margin: 1rem 0;
-}
-
-.timeline {
+section#experience div.timeline {
   position: relative;
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   padding-left: 20px;
 }
 
-.timeline .timeline-item>span {
-  color: #fff !important;
-}
-
-.timeline::before {
+section#experience div.timeline::before {
   content: '';
   position: absolute;
   left: 0;
@@ -88,21 +124,18 @@ span.position-absolute.exp-img img {
   background-color: #343a40;
 }
 
-.timeline-item {
+section#experience div.timeline div.experience-card {
   position: relative;
   margin-bottom: 30px;
-  padding: 0 2rem 1rem;
+  padding: 2rem;
   box-shadow: 0 0px 16px -8px rgb(0, 0, 0, 1);
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.3s ease;
   border-radius: 20px;
 }
 
-.timeline-item:hover {
-  transform: translateY(-7px);
-}
-
-.timeline-icon {
+section#experience div.timeline div.experience-card::after {
+  content: "";
   position: absolute;
   left: -26px;
   top: 0px;
@@ -117,36 +150,22 @@ span.position-absolute.exp-img img {
   font-size: 1.2rem;
 }
 
-.otherlinks li a {
-  color: #007bff !important;
+section#experience div.timeline div.experience-card:hover {
+  transform: translateY(-7px);
 }
 
-.timeline-content h4 {
-  margin-bottom: 0.2rem;
+section#experience div.timeline div.experience-card span img {
+  top: 70px;
+  right: 35px;
+  position: absolute;
+  width: 50px;
 }
 
-.timeline-content h6 {
-  margin-bottom: 0.5rem;
+section#skills {
+  position: relative;
 }
 
-.timeline-content p.text-primary {
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-
-
-#skills h2 {
-  color: #343a40;
-}
-
-.lang span {
-  color: #9dcbe1;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.lang {
+section#skills div.myskills div.skill {
   background-color: #343a40;
   border-radius: 10px;
   display: inline-block;
@@ -156,24 +175,7 @@ span.position-absolute.exp-img img {
   transition: transform 0.2s ease, scale 0.2s ease;
 }
 
-.lang:hover {
-  scale: 1.11;
-}
-
-.lang svg {
-  color: white;
-  margin: 0 10px 0 0;
-}
-
-.contact-ref a {
-  background-color: #343a40;
-  color: #fff;
-  padding: 10px 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-}
-
-.myskills .lang {
+section#skills div.myskills div.skill {
   animation: colorPulse 1s infinite;
 }
 
@@ -183,7 +185,6 @@ span.position-absolute.exp-img img {
   }
 
   50% {
-    /* background-color: #111a1e; */
     background-color: #000;
     transform: matrix(1, 0.03, 0, 1, 0, 1);
   }
@@ -193,46 +194,12 @@ span.position-absolute.exp-img img {
   }
 }
 
-#skills {
-  position: relative;
-}
-
-.hidesection {
-  text-align: center;
-  font-size: small;
-  padding: 0.5rem 1rem;
-  color: white;
-  border-radius: 20px;
-  font-weight: bold;
-  font-style: italic;
-
-}
-
-.ss {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.5s forwards;
-  text-align: right;
-  margin: -26px 0 0 0;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.myskills .test a {
-  text-decoration: none;
-}
-
-.myskills .test {
-  animation: test 2s infinite;
+section#skills div.myskills .div.special-skill {
+  animation: special-skill 2s infinite;
   cursor: pointer;
 }
 
-@keyframes test {
+@keyframes special-skill {
   0% {
     background-color: #17a2b8;
   }
@@ -245,4 +212,61 @@ span.position-absolute.exp-img img {
   100% {
     background-color: #343a40;
   }
+}
+
+section#skills div.myskills div.skill:hover {
+  scale: 1.11;
+}
+
+section#skills div.myskills div.skill svg {
+  color: white;
+  margin: 0 10px 0 0;
+}
+
+section#skills div.myskills div.skill span {
+  color: #9dcbe1;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hidesection {
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: right;
+  margin: 20px 0 0 0;
+  animation: fadeUp 0.5s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidesection span {
+  text-align: center;
+  font-size: small;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 20px;
+  font-weight: bold;
+  font-style: italic;
+  background-color: #17a2b8;
+}
+
+section#languages,
+section#contact {
+  text-align: center;
+}
+
+section#contact {
+  margin-bottom: 5rem;
+}
+
+section#contact div.contact-ref a {
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px 1rem;
+  border-radius: 10px;
 }

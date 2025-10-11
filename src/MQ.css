@@ -1,0 +1,58 @@
+/* Media query */
+@media screen and (max-width: 1200px) {
+
+    section#education div.education-card ul.links,
+    section#experience div.experience-card ul.links {
+        flex-direction: column;
+    }
+
+    section#education div.education-card ul.links li,
+    section#experience div.experience-card ul.links li {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    section#profile .details {
+        margin: 1rem;
+    }
+
+    section#education div.education-card div.location,
+    section#experience div.experience-card div.location {
+        position: relative !important;
+        top: unset !important;
+        bottom: unset !important;
+        right: unset !important;
+        display: flex;
+        margin: 1rem 0 0 -1rem;
+        left: unset !important;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    section h4 {
+        font-size: 16px;
+    }
+
+    section p {
+        font-size: 12px;
+    }
+
+    section#education div.education-card ul.links h6,
+    section#experience div.experience-card ul.links h6 {
+        font-size: 14px;
+    }
+
+    section#education div.education-card ul.links li span,
+    section#experience div.experience-card ul.links li span {
+        font-size: 14px;
+    }
+    section#contact div.contact-ref a{
+        margin: 1rem 0;
+        display: block;
+    }
+}
