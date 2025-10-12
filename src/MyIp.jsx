@@ -13,6 +13,9 @@ export default function MyIp() {
             .catch(err => {
                 console.error("Failed to get IP:", err);
             });
+            axios.get("https://data-analysis-gqcx.onrender.com/api/data").then((res)=>{
+                console.log(res.data);
+            })
     }, []);
 
     return <div></div>;
