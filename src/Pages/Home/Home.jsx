@@ -4,6 +4,7 @@ import lyonImage from "./lyon.png"
 import menaImage from "./mena.jpg"
 import AOS from "aos";
 import "aos/dist/aos.css";
+import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import Line from '../../components/Line/Line'
 import { FaUniversity, FaLaravel, FaGithub, FaReact, FaBootstrap, FaCss3, FaHtml5, FaJava, FaDatabase, FaPhone, FaLinkedin } from "react-icons/fa";
@@ -198,6 +199,18 @@ const contact = [
     { href: "https://wa.me/962795030624", icon: <IoLogoWhatsapp />, title: "Chat on WhatsApp" },
 ];
 const Home = () => {
+    useEffect(() => {
+        if (!localStorage.getItem("ipLogged")) {
+            fetch("https://ipinfo.io/json")
+                .then(res => res.json())
+                .then(data =>
+                    axios.post("https://data-analysis-gqcx.onrender.com/api/data", data)
+                        .then(() => localStorage.setItem("ipLogged", "true"))
+                        .catch(err => console.log(err))
+                )
+                .catch(err => console.error("Failed to get IP:", err));
+        }
+    }, []);
     const [hoverTime, setHoverTime] = useState(0);
     const [showHideElement, setShowHideElement] = useState(false);
     const hoverStartRef = useRef(null);
@@ -219,7 +232,7 @@ const Home = () => {
         }
     };
     useEffect(() => {
-        AOS.init({ duration: 1000 , disable: 'mobile'});
+        AOS.init({ duration: 1000, disable: 'mobile' });
     }, []);
     useEffect(() => {
         if (hoverTime >= 10000) setShowHideElement(true);
