@@ -96,5 +96,17 @@
     "timezone": "Asia/Amman",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-14T18:41:52.173Z"
+  },
+  {
+    "ip": "86.108.18.196",
+    "hostname": "86.108.x.196.go.com.jo",
+    "city": "Ṣuwayliḥ",
+    "region": "Balqa",
+    "country": "JO",
+    "loc": "32.0221,35.8439",
+    "org": "AS8376 Jordan Data Communications Company LLC",
+    "timezone": "Asia/Amman",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-14T18:46:22.245Z"
   }
 ]
