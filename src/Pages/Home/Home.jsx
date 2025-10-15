@@ -262,19 +262,6 @@ const Home = () => {
                 </div>
             </section>
             <Line />
-
-                <div className="form-group w-50 ml-5">
-                    <input enterKeyHint="done" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="enter" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="search" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="send" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="go" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="next" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <input enterKeyHint="previous" type="email" className="my-3 form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
-                    <button enterKeyHint="go" type="submit" className="my-3 btn btn-primary">Submit</button>
-                </div>
-
-
             <section aos="fade-down" id="education">
                 <h2>education & achievements</h2>
                 <div className="container">
