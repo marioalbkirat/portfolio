@@ -72,5 +72,16 @@
     "timezone": "Europe/Moscow",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-14T15:08:40.715Z"
+  },
+  {
+    "ip": "212.34.20.72",
+    "city": "Khuraybat as Sūq",
+    "region": "Amman",
+    "country": "JO",
+    "loc": "31.8791,35.9210",
+    "org": "AS8697 Jordan Telecommunications PSC",
+    "timezone": "Asia/Amman",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-15T12:23:05.720Z"
   }
 ]
