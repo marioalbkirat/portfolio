@@ -83,5 +83,18 @@
     "timezone": "Asia/Amman",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-15T12:23:05.720Z"
+  },
+  {
+    "ip": "54.201.212.212",
+    "hostname": "ec2-54-201-212-212.us-west-2.compute.amazonaws.com",
+    "city": "Boardman",
+    "region": "Oregon",
+    "country": "US",
+    "loc": "45.8399,-119.7006",
+    "org": "AS16509 Amazon.com, Inc.",
+    "postal": "97818",
+    "timezone": "America/Los_Angeles",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-15T19:40:58.075Z"
   }
 ]
