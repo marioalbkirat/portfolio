@@ -107,5 +107,16 @@
     "timezone": "Asia/Amman",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-15T23:05:59.850Z"
+  },
+  {
+    "ip": "149.200.141.202",
+    "city": "Mādabā",
+    "region": "Madaba",
+    "country": "JO",
+    "loc": "31.7160,35.7939",
+    "org": "AS8376 Jordan Data Communications Company LLC",
+    "timezone": "Asia/Amman",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-22T12:46:00.740Z"
   }
 ]
