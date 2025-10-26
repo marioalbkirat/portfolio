@@ -177,5 +177,13 @@
     "timezone": "Asia/Amman",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-26T13:42:07.966Z"
+  },
+  {
+    "status": 429,
+    "error": {
+      "title": "Rate limit exceeded",
+      "message": "You've hit the daily limit for the unauthenticated API.  Create an API access token by signing up to get 50k req/month."
+    },
+    "timestamp": "2025-10-26T13:44:04.466Z"
   }
 ]
