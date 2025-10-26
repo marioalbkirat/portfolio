@@ -14,5 +14,16 @@
       "message": "You've hit the daily limit for the unauthenticated API.  Create an API access token by signing up to get 50k req/month."
     },
     "timestamp": "2025-10-26T13:54:55.511Z"
+  },
+  {
+    "ip": "149.200.141.202",
+    "city": "Amman",
+    "region": "Amman",
+    "country": "JO",
+    "loc": "31.9552,35.9450",
+    "org": "AS8376 Jordan Data Communications Company LLC",
+    "timezone": "Asia/Amman",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-26T13:56:24.257Z"
   }
 ]
