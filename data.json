@@ -25,5 +25,16 @@
     "timezone": "Asia/Amman",
     "readme": "https://ipinfo.io/missingauth",
     "timestamp": "2025-10-26T14:15:09.574Z"
+  },
+  {
+    "ip": "149.200.141.202",
+    "city": "Amman",
+    "region": "Amman",
+    "country": "JO",
+    "loc": "31.9552,35.9450",
+    "org": "AS8376 Jordan Data Communications Company LLC",
+    "timezone": "Asia/Amman",
+    "readme": "https://ipinfo.io/missingauth",
+    "timestamp": "2025-10-27T17:44:52.691Z"
   }
 ]
